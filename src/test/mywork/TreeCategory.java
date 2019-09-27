@@ -6,7 +6,7 @@ import java.util.ArrayList;
 class TreeCategory { 
 	
 	
-	public class CategoryNode
+	public static class CategoryNode
 	{
 		public int value;
 		public ArrayList<CategoryNode> subCategoryNode;
@@ -28,7 +28,7 @@ class TreeCategory {
 		}
 	}
 	
-	static CategoryNode mosPop;
+	static CategoryNode mosPop = null;
 	static float count = 0;
 	
 	public static Combo mostPopular(CategoryNode root) {
@@ -60,18 +60,25 @@ class TreeCategory {
 	
     
     public static void main(String args[]) 
-    { 
+    {
+
+		CategoryNode root = new CategoryNode(20);
+
+		root.subCategoryNode.add(new CategoryNode(12));
+		root.subCategoryNode.add(new CategoryNode(18));
+		root.subCategoryNode.get(0).subCategoryNode.add(new CategoryNode(11));
+		root.subCategoryNode.get(0).subCategoryNode.add(new CategoryNode(2));
+		root.subCategoryNode.get(0).subCategoryNode.add(new CategoryNode(3));
+		root.subCategoryNode.get(1).subCategoryNode.add(new CategoryNode(15));
+		root.subCategoryNode.get(1).subCategoryNode.add(new CategoryNode(8));
+
+		mostPopular(root);
+		System.out.println(mosPop.value + " having average: " + count);
         
-       int k =5;
-        
-       String str = "MyNameisAbhimanyu";
+
   
-//        ArrayList<String> arr = getSubstring(str, k);
-//        
-//        for (int i=0; i<arr.size(); i++)
-//        	System.out.println(arr.get(i));
-//        
-        System.out.println((int)'a');
+
+
     }
 
 	

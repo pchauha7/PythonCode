@@ -2,7 +2,6 @@ package test.mywork;
 import java.util.ArrayList;
 
 
-
 class AmazonMaximumDepth { 
 	
 	
@@ -27,8 +26,8 @@ class AmazonMaximumDepth {
 		Node root = new Node(A[0]);
 		
 		ArrayList<Node> arr = new ArrayList<>();
-		arr.add(root);
-		
+		boolean add = arr.add(root);
+
 		for (int i=1; i<A.length; i++) 
 			arr.add(new Node(A[i]));
 			
@@ -90,7 +89,7 @@ class AmazonMaximumDepth {
         
        int k =5;
         
-       String str = "MyNameisAbhimanyu";
+       String str = "MyNameisPrashant";
   
 //        ArrayList<String> arr = getSubstring(str, k);
 //        
